@@ -7,7 +7,7 @@ def cross_validation() -> list:
     return 5 disjoint folders of dataset
     use to conduct validation
     """
-    X_train_all, y_train_all = mnist_reader.load_mnist('./data/fashion', kind='train')
+    X_train_all, y_train_all = mnist_reader.load_mnist('../data/fashion', kind='train')
 
     X_train_all = X_train_all / 255.0
 
