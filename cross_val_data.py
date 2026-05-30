@@ -16,10 +16,10 @@ def cross_validation() -> list:
     val_fold = []   # simliar as tr_fold
 
     for tr_idx, val_idx in kfold.split(X_train_all):
-        X_tr = X_train_all[tr_idx].reshape(-1,28,28,1)
+        X_tr = X_train_all[tr_idx]
         y_tr = y_train_all[tr_idx]
 
-        X_val = X_train_all[val_idx].reshape(-1,28,28,1)
+        X_val = X_train_all[val_idx]
         y_val = y_train_all[val_idx]
 
         tr_fold.append([X_tr, y_tr])
